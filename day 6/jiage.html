@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            border-radius: 10px;
+            float: left;
+            position: relative;
+        }
+        #box div{
+
+            float: left;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+        #box>div:first-child {
+            border-top-left-radius: 10px;
+            background-color: blue;
+        }
+        #box div:nth-child(2){
+            background-color: #009764;
+        }
+        #box div:nth-child(3){
+            background-color: #da1941;
+        }
+        #box>div:last-child{
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 0;
+            background-color: #eab719;
+        }
+        #box>div>div {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            padding: 20px;
+            width: 263px;
+            height: 80px;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+
+        }
+        #box>div:first-child>div{
+            background: linear-gradient(to left,skyblue,blue);
+            box-shadow: 3px 3px 3px 3px blue;
+            display: block;
+        }
+        #box>div:nth-child(2)>div {
+            background: linear-gradient(to left,green,greenyellow);
+            box-shadow: 3px 3px 3px 3px green;
+        }
+        #box>div:nth-child(3)>div {
+            box-shadow: 3px 3px 3px 3px red;
+             background: linear-gradient(to left,red,darkred);
+         }
+        #box>div:last-child>div {
+            box-shadow: 3px 3px 3px 3px yellow;
+            background: linear-gradient(to left,yellow,sandybrown);
+        }
+        #box>div:nth-child(2)>div {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s linear;
+        }
+        #box>div:nth-child(3)>div {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s linear;
+        }
+        #box>div:last-child>div {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s linear;
+        }
+        #box>div:nth-child(2):hover>div {
+            opacity: 1;
+            visibility: visible;
+        }
+        #box>div:nth-child(3):hover>div {
+            opacity: 1;
+            visibility: visible;
+        }
+        #box>div:last-child:hover>div {
+            opacity: 1;
+            visibility: visible;
+        }
+        #box>div>div>span {
+            text-shadow: 2px 2px 2px white;
+            line-height: 80px;
+            margin-right: 20px;
+        }
+        #box>div>div>input {
+            width: 70px;
+            height: 30px;
+            font-size: 12px;
+        }
+        #box2 {
+            width: 1100px;
+            height: 420px;
+            overflow: hidden;
+        }
+        #donghua {
+            width: 4800px;
+            height: 420px;
+            animation:tuisong 10s infinite alternate 1s;
+        }
+        @keyframes tuisong {
+            35% {
+                margin-left: -1080px;
+            }
+            70% {
+                margin-left: -2160px;
+            }
+            100% {
+                margin-left: -3240px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div>一周
+    <div>
+        <span>$7.00</span>
+        <input type="button" value="立即购买">
+
+    </div>
+    </div>
+    <div>一月
+        <div>
+        <span>$28.00</span>
+        <input type="button" value="立即购买">
+
+    </div>
+    </div>
+    <div>一季度
+        <div>
+        <span>$86.00</span>
+        <input type="button" value="立即购买">
+
+    </div>
+    </div>
+    <div>一年
+        <div>
+        <span>$360.00</span>
+        <input type="button" value="立即购买">
+
+    </div>
+    </div>
+</div>
+<div id="box2">
+<div id="donghua">
+    <img src="./image/1.jpg" alt="">
+    <img src="./image/2.jpg" alt="">
+    <img src="./image/3.jpg" alt="">
+    <img src="./image/4.jpg" alt="">
+</div>
+</div>
+</body>
+</html>

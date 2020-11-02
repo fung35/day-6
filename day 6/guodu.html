@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bar {
+            width: 100px;
+            height: 20px;
+            border : 1px solid red;
+            border-radius: 7px;
+            padding: 1px;
+            transition: width 1s,height 1s;
+
+        }
+        .bar-in {
+            width: 50%;
+            height: 100%;
+            background-color: red;
+            transition: width 1s;
+
+        }
+        .bar:hover {
+            width: 200px;
+            height: 40px;
+        }
+        .bar:hover .bar-in {
+             width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="bar">
+    <div class="bar-in"></div>
+</div>
+
+</body>
+</html>
